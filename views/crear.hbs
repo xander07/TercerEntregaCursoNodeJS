@@ -1,0 +1,43 @@
+{{>header}}
+<link rel="stylesheet" type="text/css" href="../public/crear.css" />
+
+<h2>Crear un curso</h2>
+
+<main class="main">
+    <form action="/crearCurso" method="POST">
+        <div class="form-row col-md-12">
+        <div class="form-group col-md-6">
+            <label for="inputId">Id Curso</label>
+            <input type="number" class="form-control" name="id" id="inputId" placeholder="Ingresar Id Numérico" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputNombreCurso">Nombre Curso</label>
+            <input type="text" class="form-control" name="nombre" id="inputNombreCurso" placeholder="Ingresar Nombre" required>
+        </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputDescripcion">Descripción del Curso</label>
+            <textarea type="text" class="form-control" name="descripcion" id="inputAddress" placeholder="Ingresar una descripción" required></textarea>
+        </div>
+        <div class="form-row col-md-12">
+            <div class="form-group col-md-2">
+                <label for="inputPrecio">Precio de Curso</label>
+                <input type="number" class="form-control" name="precio" id="inputPrecio" placeholder="700000" required>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputModalidad">Modalidad</label>
+                <select id="inputModalidad" class="form-control" name="modalidad">
+                    <option selected></option>
+                    <option>Virtual</option>
+                    <option>Presencial</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputIntensidad">Intensidad Horaria</label>
+                <input type="number" class="form-control" id="inputIntensidad" name="intensidad" placeholder="24">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Crear</button>
+    </form>
+</main>
+{{>footer}}
